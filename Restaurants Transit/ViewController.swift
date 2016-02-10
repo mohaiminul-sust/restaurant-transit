@@ -156,5 +156,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return annotationView
     }
     
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        let placemark = MKPlacemark(coordinate: view.annotation!.coordinate, addressDictionary: nil)
+        
+        //The map item is the restaurent location
+        let mapItem = MKMapItem(placemark: placemark)
+        
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeTransit]
+        
+        mapItem.openInMapsWithLaunchOptions(launchOptions)
+    }
 }
 
