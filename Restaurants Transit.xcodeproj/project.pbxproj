@@ -24,6 +24,7 @@
 		C45EE69D1C6ABF8D00EE0643 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45EE69B1C6ABF8D00EE0643 /* LaunchScreen.storyboard */; };
 		C45EE6A81C6ABF8D00EE0643 /* Restaurants_TransitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EE6A71C6ABF8D00EE0643 /* Restaurants_TransitTests.swift */; };
 		C45EE6B31C6ABF8E00EE0643 /* Restaurants_TransitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EE6B21C6ABF8E00EE0643 /* Restaurants_TransitUITests.swift */; };
+		C4F789521C6B554500A0D511 /* RestaurentAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F789511C6B554500A0D511 /* RestaurentAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C45EE6AE1C6ABF8D00EE0643 /* Restaurants TransitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Restaurants TransitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45EE6B21C6ABF8E00EE0643 /* Restaurants_TransitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants_TransitUITests.swift; sourceTree = "<group>"; };
 		C45EE6B41C6ABF8E00EE0643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F789511C6B554500A0D511 /* RestaurentAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurentAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				C45EE6921C6ABF8D00EE0643 /* AppDelegate.swift */,
 				C45EE6941C6ABF8D00EE0643 /* ViewController.swift */,
+				C4F789511C6B554500A0D511 /* RestaurentAnnotation.swift */,
 				C45EE6961C6ABF8D00EE0643 /* Main.storyboard */,
 				C45EE6991C6ABF8D00EE0643 /* Assets.xcassets */,
 				C45EE69B1C6ABF8D00EE0643 /* LaunchScreen.storyboard */,
@@ -303,6 +306,7 @@
 			files = (
 				C45EE6951C6ABF8D00EE0643 /* ViewController.swift in Sources */,
 				C45EE6931C6ABF8D00EE0643 /* AppDelegate.swift in Sources */,
+				C4F789521C6B554500A0D511 /* RestaurentAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

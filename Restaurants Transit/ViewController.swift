@@ -62,6 +62,56 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
 
     @IBAction func showNext(sender: AnyObject) {
+        // 1
+        if currentRestaurentIndex > names.count - 1{
+            currentRestaurentIndex = 0
+        }
+        // 2
+        let coordinate = coordinates[currentRestaurentIndex]
+        let latitude: Double   = coordinate[0] as! Double
+        let longitude: Double  = coordinate[1] as! Double
+        let locationCoordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
+        var point = RestaurentAnnotation(coordinate: locationCoordinates)
+        point.title = names[currentRestaurentIndex]
+        point.image = images[currentRestaurentIndex]
+        // 3
+        // Calculate Transit ETA Request
+        let request = MKDirectionsRequest()
+        /* Source MKMapItem */
+        let sourceItem = MKMapItem(placemark: MKPlacemark(coordinate: mapView.userLocation.coordinate, addressDictionary: nil))
+        request.source = sourceItem
+        /* Destination MKMapItem */
+        let destinationItem = MKMapItem(placemark: MKPlacemark(coordinate: locationCoordinates, addressDictionary: nil))
+        request.destination = destinationItem
+        request.requestsAlternateRoutes = false
+        // Looking for Transit directions, set the type to Transit
+        request.transportType = .Transit
+        // Center the map region around the restaurant coordinates
+        mapView.setCenterCoordinate(locationCoordinates, animated: true)
+        // You use the MKDirectionsRequest object constructed above to initialise an MKDirections object
+        let directions = MKDirections(request: request)
+        directions.calculateETAWithCompletionHandler { (etaResponse, error) -> Void in
+            if let error = error {
+                print("Error while requesting ETA : \(error.localizedDescription)")
+                point.eta = error.localizedDescription
+            }else{
+                point.eta = "\(Int((etaResponse?.expectedTravelTime)!/60)) min"
+            }
+            // 4
+            var isExist = false
+            for annotation in self.mapView.annotations{
+                if annotation.coordinate.longitude == point.coordinate.longitude && annotation.coordinate.latitude == point.coordinate.latitude{
+                    isExist = true
+                    point = annotation as! RestaurentAnnotation
+                }
+            }
+            if !isExist{
+                self.mapView.addAnnotation(point)
+            }
+            self.mapView.selectAnnotation(point, animated: true)
+            self.currentRestaurentIndex += 1
+        }
     }
     
     //MARK: MKMapViewDelegate
@@ -71,6 +121,39 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         mapView.setRegion(region, animated: true)
         
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        // If annotation is not of type RestaurantAnnotation (MKUserLocation types for instance), return nil
+        if !(annotation is RestaurentAnnotation){
+            return nil
+        }
+        
+        var annotationView = self.mapView.dequeueReusableAnnotationViewWithIdentifier("Pin")
+        
+        if annotationView == nil{
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Pin")
+            annotationView?.canShowCallout = true
+        }else{
+            annotationView?.annotation = annotation
+        }
+        
+        let restaurentAnnotation = annotation as! RestaurentAnnotation
+        annotationView?.detailCalloutAccessoryView = UIImageView(image: restaurentAnnotation.image)
+        
+        // Left Accessory
+        let leftAccessory = UILabel(frame: CGRectMake(0,0,50,30))
+        leftAccessory.text = restaurentAnnotation.eta
+        leftAccessory.font = UIFont(name: "Verdana", size: 10)
+        annotationView?.leftCalloutAccessoryView = leftAccessory
+        
+        // Right accessory view
+        let image = UIImage(named: "bus.png")
+        let button = UIButton(type: .Custom)
+        button.frame = CGRectMake(0, 0, 30, 30)
+        button.setImage(image, forState: .Normal)
+        annotationView?.rightCalloutAccessoryView = button
+        return annotationView
     }
     
 }
