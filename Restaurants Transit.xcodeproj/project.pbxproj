@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C458CA011C6AC377000114ED /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C458CA001C6AC377000114ED /* MapKit.framework */; };
+		C458CA0B1C6AC4F4000114ED /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = C458CA021C6AC4F4000114ED /* bus.png */; };
+		C458CA0C1C6AC4F4000114ED /* restaurant-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C458CA031C6AC4F4000114ED /* restaurant-1.jpeg */; };
+		C458CA0D1C6AC4F4000114ED /* restaurant-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C458CA041C6AC4F4000114ED /* restaurant-2.jpeg */; };
+		C458CA0E1C6AC4F4000114ED /* restaurant-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C458CA051C6AC4F4000114ED /* restaurant-3.jpeg */; };
+		C458CA0F1C6AC4F4000114ED /* restaurant-4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C458CA061C6AC4F4000114ED /* restaurant-4.jpeg */; };
+		C458CA101C6AC4F4000114ED /* restaurant-5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C458CA071C6AC4F4000114ED /* restaurant-5.jpeg */; };
+		C458CA111C6AC4F4000114ED /* restaurant-6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C458CA081C6AC4F4000114ED /* restaurant-6.jpeg */; };
+		C458CA121C6AC4F4000114ED /* restaurant-7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C458CA091C6AC4F4000114ED /* restaurant-7.jpeg */; };
+		C458CA131C6AC4F4000114ED /* restaurant-8.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C458CA0A1C6AC4F4000114ED /* restaurant-8.jpeg */; };
 		C45EE6931C6ABF8D00EE0643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EE6921C6ABF8D00EE0643 /* AppDelegate.swift */; };
 		C45EE6951C6ABF8D00EE0643 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45EE6941C6ABF8D00EE0643 /* ViewController.swift */; };
 		C45EE6981C6ABF8D00EE0643 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C45EE6961C6ABF8D00EE0643 /* Main.storyboard */; };
@@ -34,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C458CA001C6AC377000114ED /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C458CA021C6AC4F4000114ED /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus.png; sourceTree = "<group>"; };
+		C458CA031C6AC4F4000114ED /* restaurant-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "restaurant-1.jpeg"; sourceTree = "<group>"; };
+		C458CA041C6AC4F4000114ED /* restaurant-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "restaurant-2.jpeg"; sourceTree = "<group>"; };
+		C458CA051C6AC4F4000114ED /* restaurant-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "restaurant-3.jpeg"; sourceTree = "<group>"; };
+		C458CA061C6AC4F4000114ED /* restaurant-4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "restaurant-4.jpeg"; sourceTree = "<group>"; };
+		C458CA071C6AC4F4000114ED /* restaurant-5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "restaurant-5.jpeg"; sourceTree = "<group>"; };
+		C458CA081C6AC4F4000114ED /* restaurant-6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "restaurant-6.jpeg"; sourceTree = "<group>"; };
+		C458CA091C6AC4F4000114ED /* restaurant-7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "restaurant-7.jpeg"; sourceTree = "<group>"; };
+		C458CA0A1C6AC4F4000114ED /* restaurant-8.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "restaurant-8.jpeg"; sourceTree = "<group>"; };
 		C45EE68F1C6ABF8D00EE0643 /* Restaurants Transit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurants Transit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C45EE6921C6ABF8D00EE0643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C45EE6941C6ABF8D00EE0643 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C458CA011C6AC377000114ED /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +98,7 @@
 		C45EE6861C6ABF8D00EE0643 = {
 			isa = PBXGroup;
 			children = (
+				C458CA001C6AC377000114ED /* MapKit.framework */,
 				C45EE6911C6ABF8D00EE0643 /* Restaurants Transit */,
 				C45EE6A61C6ABF8D00EE0643 /* Restaurants TransitTests */,
 				C45EE6B11C6ABF8E00EE0643 /* Restaurants TransitUITests */,
@@ -103,6 +125,15 @@
 				C45EE6991C6ABF8D00EE0643 /* Assets.xcassets */,
 				C45EE69B1C6ABF8D00EE0643 /* LaunchScreen.storyboard */,
 				C45EE69E1C6ABF8D00EE0643 /* Info.plist */,
+				C458CA021C6AC4F4000114ED /* bus.png */,
+				C458CA031C6AC4F4000114ED /* restaurant-1.jpeg */,
+				C458CA041C6AC4F4000114ED /* restaurant-2.jpeg */,
+				C458CA051C6AC4F4000114ED /* restaurant-3.jpeg */,
+				C458CA061C6AC4F4000114ED /* restaurant-4.jpeg */,
+				C458CA071C6AC4F4000114ED /* restaurant-5.jpeg */,
+				C458CA081C6AC4F4000114ED /* restaurant-6.jpeg */,
+				C458CA091C6AC4F4000114ED /* restaurant-7.jpeg */,
+				C458CA0A1C6AC4F4000114ED /* restaurant-8.jpeg */,
 			);
 			path = "Restaurants Transit";
 			sourceTree = "<group>";
@@ -193,6 +224,11 @@
 				TargetAttributes = {
 					C45EE68E1C6ABF8D00EE0643 = {
 						CreatedOnToolsVersion = 7.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C45EE6A21C6ABF8D00EE0643 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -229,9 +265,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C458CA0B1C6AC4F4000114ED /* bus.png in Resources */,
+				C458CA0D1C6AC4F4000114ED /* restaurant-2.jpeg in Resources */,
 				C45EE69D1C6ABF8D00EE0643 /* LaunchScreen.storyboard in Resources */,
+				C458CA0C1C6AC4F4000114ED /* restaurant-1.jpeg in Resources */,
+				C458CA101C6AC4F4000114ED /* restaurant-5.jpeg in Resources */,
 				C45EE69A1C6ABF8D00EE0643 /* Assets.xcassets in Resources */,
 				C45EE6981C6ABF8D00EE0643 /* Main.storyboard in Resources */,
+				C458CA131C6AC4F4000114ED /* restaurant-8.jpeg in Resources */,
+				C458CA111C6AC4F4000114ED /* restaurant-6.jpeg in Resources */,
+				C458CA0E1C6AC4F4000114ED /* restaurant-3.jpeg in Resources */,
+				C458CA0F1C6AC4F4000114ED /* restaurant-4.jpeg in Resources */,
+				C458CA121C6AC4F4000114ED /* restaurant-7.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +529,7 @@
 				C45EE6B91C6ABF8E00EE0643 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C45EE6BA1C6ABF8E00EE0643 /* Build configuration list for PBXNativeTarget "Restaurants TransitTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +538,7 @@
 				C45EE6BC1C6ABF8E00EE0643 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C45EE6BD1C6ABF8E00EE0643 /* Build configuration list for PBXNativeTarget "Restaurants TransitUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +547,7 @@
 				C45EE6BF1C6ABF8E00EE0643 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
